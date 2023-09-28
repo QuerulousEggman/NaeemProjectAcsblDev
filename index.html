@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Accessible Development</title>
+    <link rel="stylesheet" href='styles.css'>
+  </head>
+  <body>
+    <header>
+      <ul class='navigation'>
+        <li>
+          <a href="#content" class='sr-only'>Skip to main content</a>
+        </li>
+        <li>
+          <a href="#footer" class='sr-only'>Skip to footer content</a>
+        </li>
+      </ul>
+      <section class='topnav'id='myTopnav'>
+        <div class='logo'>
+          <a href="#index.html" aria-label='Home page' class='active'>
+            <div aria-hidden='true' class='brandmark'>
+              <img src="A11y logo1.png" alt>
+            </div>
+          </a>
+        </div>
+        <div class='login'>
+          <a href="#index.html">Login</a>
+          <a href="#index.html">Register</a>
+          <a href='javascript:void(0);' class='icon' onclick='myFunction()'>
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </section>
+    </header>  
+    <script src='script.js' defer></script>
+  </body>
+</html>
