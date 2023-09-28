@@ -1,4 +1,4 @@
-ul.navigation {
+ul.hidden-navigation {
   list-style-type: none;
 }
 
@@ -16,21 +16,47 @@ ul.navigation {
   height: auto;
 }
 
-/* Add a black background color to the top navigation */
-.login {
-  background-color: #333;
-  overflow: hidden;
+.logo {
+  width: 10%;
 }
+
+/* Add a black background color to the top navigation */
+ul.login {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.login li {
+  float: left;
+}
+
+ul.login li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.login li a:hover {
+  background-color: #111;
+}
+
+
 
 /* Style the links inside the navigation bar */
 .login a {
-  float: right;
-  display: block;
+  float: left;
+  display: inline;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
+  font-family: arial;
 }
 
 /* Change the colour of links on hover */
@@ -54,7 +80,7 @@ ul.navigation {
 @media screen and (max-width: 600px) {
   .login a:not(:first-child) {display: none;}
   .login a.icon {
-    float: right;
+    float: left;
     display: block;
   }
 }
@@ -72,4 +98,47 @@ ul.navigation {
     display: block;
     text-align: left;
   }
+}
+
+ul.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 130px;
+  background-color: #f1f1f1;
+}
+
+ul.navigation li a {
+  display:block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+ul.navigation li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+ul.navigation li a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+ul.navigation li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+ul.navigation {
+  border: 1px solid #555;
+}
+
+ul.navigation li {
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+ul.navigation li:last-child {
+  border-bottom: none;
 }

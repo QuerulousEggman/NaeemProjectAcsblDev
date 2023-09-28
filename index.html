@@ -7,8 +7,12 @@
     <link rel="stylesheet" href='styles.css'>
   </head>
   <body>
+    <div id='container' class='page_container'></div>
     <header>
-      <ul class='navigation'>
+      <div id='header' class='region_container page_header'>
+        <div class='region_inner'>
+          
+      <ul class='hidden-navigation'>
         <li>
           <a href="#content" class='sr-only'>Skip to main content</a>
         </li>
@@ -16,22 +20,38 @@
           <a href="#footer" class='sr-only'>Skip to footer content</a>
         </li>
       </ul>
-      <section class='topnav'id='myTopnav'>
-        <div class='logo'>
-          <a href="#index.html" aria-label='Home page' class='active'>
-            <div aria-hidden='true' class='brandmark'>
-              <img src="A11y logo1.png" alt>
-            </div>
-          </a>
-        </div>
-        <div class='login'>
-          <a href="#index.html">Login</a>
-          <a href="#index.html">Register</a>
-          <a href='javascript:void(0);' class='icon' onclick='myFunction()'>
-            <i class="fa fa-bars"></i>
-          </a>
-        </div>
-      </section>
+      <div class='logo'>
+        <a href="#index.html" aria-label='Home page' class='active'>
+          <div aria-hidden='true' class='brandmark'>
+            <img src="A11y logo1.png" alt>
+          </div>
+        </a>
+      </div>
+      
+      <nav class='main-navigation' aria-label='Website navigation'>
+        <ul class='navigation'>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Links</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+          <li>
+            <a href="#">Tools</a>
+          </li>
+        </ul>
+        <ul class='login'>
+          <li>
+            <a href="#index.html">Login</a>
+          </li>
+          <li>
+            <a href="#index.html">Register</a>
+          </li>
+        </ul>
+      </nav>
     </header>  
     <script src='script.js' defer></script>
   </body>
