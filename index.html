@@ -59,16 +59,31 @@
       <p>For a start, having appropriately contrasting colour combinations on your site means including people with <strong>colour vision deficiency</strong>.</p>
       <p>Also, people with moderately low vision can have difficulty telling certain colours apart so the right level of contrast will help.</p>
       <br><br>
-      <p>To this end WCAG have set out guidelines that outline the right level of contrast to be used.</p>
+      <p class='p-wcag'>To this end WCAG have set out guidelines that outline the right level of contrast to be used.</p>
       <h3>WCAG Colour Contrast Standards</h3>
-      <p>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
-      <ul>
+      <p class='p-wcag'>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
+      <ul class='wcag'>
         <li>4.5:1 for normal text</li>
         <li>3:1 for large text</li>
         <li>3:1 for graphics and user interface components</li>
       </ul>
       <br><br>
-      
+      <h2>Do you meet the criteria?</h2>
+      <form action="" method='get' class='form-input'>
+        <div class='form-input'>
+          <label for="foreground">Foreground: </label>
+          <input type="text" name='foreground' id='foreground' required />
+        </div>
+        <form action="" method='get' class='form-input'>
+          <div class='form-input'>
+            <label for="background">Background: </label>
+            <input type="text" name='background' id='background' required />
+          </div>
+          <form action="" method='get' class='form-input'>
+            <div class='form-input'>
+              <input type="submit" value='Check' />
+            </div>
+      </form>
     </main>
     <script src='script.js' defer></script>
   </body>
