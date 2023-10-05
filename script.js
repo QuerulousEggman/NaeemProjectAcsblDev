@@ -1,3 +1,5 @@
-addEventListener('click', (event) => {});
+const calc = document.querySelector(".calcRatio");
 
-onclick = (event) => {};
+function calcRatio() {
+  
+}

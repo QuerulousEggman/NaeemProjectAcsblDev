@@ -7,6 +7,7 @@
     <link rel="stylesheet" href='styles.css'>
   </head>
   <body>
+    <div class='content'>
     <div id='container' class='page_container'></div>
     <header>
       <div id='header' class='region_container page_header'>
@@ -14,7 +15,7 @@
           
       <ul class='hidden-navigation'>
         <li>
-          <a href="#content" class='sr-only'>Skip to main content</a>
+          <a href="#main" class='sr-only'>Skip to main content</a>
         </li>
         <li>
           <a href="#footer" class='sr-only'>Skip to footer content</a>
@@ -51,40 +52,76 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main id='main'>
       <h1>Colour Contrast</h1>
+      <section class='wiisi'>
       <h2>Why is it so important?</h2>
       <p>When designing a website accessible <strong>colour contrast</strong> is often given a back seat to incorporate designs which appear more appealing.</p>
       <p>So why should we worry about colour contrast if it would mean compromising aesthetics?</p>
       <p>For a start, having appropriately contrasting colour combinations on your site means including people with <strong>colour vision deficiency</strong>.</p>
       <p>Also, people with moderately low vision can have difficulty telling certain colours apart so the right level of contrast will help.</p>
-      <br><br>
+      </section>
+      <br>
+      <section class='ccpics'>
+        <img src="contrasting-colors1" class='ccpic1' alt="image showing good and bad colour combinations for contrast">
+        <picture>
+          <source media='(max-width:799px)' srcset='contrasting-colors3.jpg' />
+          <source media='(min-width:800px)' srcset='contrasting-colors2' />
+        <img src="contrasting-colors2" class='ccpic2' alt="image showing 2 examples of the same DJ set advert, one with good contrast and the other bad">
+        </picture>
+      </section>
+      <br>
       <p class='p-wcag'>To this end WCAG have set out guidelines that outline the right level of contrast to be used.</p>
+      <section class='ccs'>
       <h3>WCAG Colour Contrast Standards</h3>
       <p class='p-wcag'>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
       <ul class='wcag'>
-        <li>4.5:1 for normal text</li>
-        <li>3:1 for large text</li>
-        <li>3:1 for graphics and user interface components</li>
+        <li><b>4.5:1</b> for normal text</li>
+        <li><b>3:1</b> for <span class='largetext'>large text</span></li>
+        <li><b>3:1</b> for graphics and user interface components</li>
       </ul>
+      </section>
       <br><br>
+      <section class='ccchecker' aria-label='checker'>
       <h2>Do you meet the criteria?</h2>
+      <p>Use the colour picker tools below to select the colour for both foreground and background, then select the 'Check' button to see if it meets WCAG standards!</p>
       <form action="" method='get' class='form-input'>
         <div class='form-input'>
           <label for="foreground">Foreground: </label>
-          <input type="text" name='foreground' id='foreground' required />
+          <input type="color" name='foreground' id='fg-color' required />
         </div>
+        <br>
         <form action="" method='get' class='form-input'>
           <div class='form-input'>
             <label for="background">Background: </label>
-            <input type="text" name='background' id='background' required />
+            <input type="color" name='background' id='bg-color' required />
           </div>
-          <form action="" method='get' class='form-input'>
-            <div class='form-input'>
-              <input type="submit" value='Check' />
-            </div>
+          <br>
+          <button onclick='calcRatio()'>Check</button>
+            <br> <br>
       </form>
+    </section>
     </main>
+    <footer id='footer'>
+      <ul class='footer-navigation'>
+          <li>
+            <a href="sitemap.html">Site Map</a>
+          </li>
+          <li>
+            <a href="accessibility.html">Accessibility</a>
+          </li>
+          <li>
+            <a href="privacy.html">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="help.html">Help and Support</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+    </footer>
+  </div>
     <script src='script.js' defer></script>
   </body>
 </html>
