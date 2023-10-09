@@ -22,6 +22,10 @@ ul.hidden-navigation {
   height: auto;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 main {
   flex-grow: 1;
 }
@@ -46,7 +50,6 @@ ul.navigation li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 ul.navigation li a:hover:not(.active) {
@@ -77,6 +80,12 @@ h1, h2, p {
   text-align: center;
 }
 
+.flex-container {
+  display: flex;
+  height: 200px;
+  justify-content: space-around;
+}
+
 .wiisi {
   background-color:rgb(250, 209, 230);
 }
@@ -84,30 +93,6 @@ h1, h2, p {
 .ccs {
   text-align: left;
   background-color: rgb(196, 255, 255);
-}
-
-.ccpics {
-  display:flex;
-  flex-wrap: wrap;
-  padding: 18px 18px;
-}
-
-.ccpic1 {
-  width:250px;
-  height: 150px;
-  flex-flow: wrap;
-  position: relative;
-  max-width: 100%;
-  padding-right: 18px;
-}
-
-.ccpic2 {
-  width:430px;
-  height: 150px;
-  flex-flow: wrap;
-  position: relative;
-  max-width: 100%;
-  padding-left: 18px;
 }
 
 .largetext {

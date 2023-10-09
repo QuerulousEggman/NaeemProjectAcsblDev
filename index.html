@@ -54,6 +54,8 @@
     </header>
     <main id='main'>
       <h1>Colour Contrast</h1>
+      <div class='flex-container'>
+        <div>
       <section class='wiisi'>
       <h2>Why is it so important?</h2>
       <p>When designing a website accessible <strong>colour contrast</strong> is often given a back seat to incorporate designs which appear more appealing.</p>
@@ -61,18 +63,12 @@
       <p>For a start, having appropriately contrasting colour combinations on your site means including people with <strong>colour vision deficiency</strong>.</p>
       <p>Also, people with moderately low vision can have difficulty telling certain colours apart so the right level of contrast will help.</p>
       </section>
-      <br>
-      <section class='ccpics'>
-        <img src="contrasting-colors1" class='ccpic1' alt="image showing good and bad colour combinations for contrast">
-        <picture>
-          <source media='(max-width:799px)' srcset='contrasting-colors3.jpg' />
-          <source media='(min-width:800px)' srcset='contrasting-colors2' />
-        <img src="contrasting-colors2" class='ccpic2' alt="image showing 2 examples of the same DJ set advert, one with good contrast and the other bad">
-        </picture>
-      </section>
-      <br>
-      <p class='p-wcag'>To this end WCAG have set out guidelines that outline the right level of contrast to be used.</p>
-      <section class='ccs'>
+        </div>
+        <div>
+     <p class='p-wcag'>To this end WCAG have set out guidelines that outline the right level of contrast to be used.</p>
+        </div>
+        <div>
+     <section class='ccs'>
       <h3>WCAG Colour Contrast Standards</h3>
       <p class='p-wcag'>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
       <ul class='wcag'>
@@ -81,7 +77,8 @@
         <li><b>3:1</b> for graphics and user interface components</li>
       </ul>
       </section>
-      <br><br>
+        </div>
+      <div>
       <section class='ccchecker' aria-label='checker'>
       <h2>Do you meet the criteria?</h2>
       <p>Use the colour picker tools below to select the colour for both foreground and background, then select the 'Check' button to see if it meets WCAG standards!</p>
@@ -90,16 +87,17 @@
           <label for="foreground">Foreground: </label>
           <input type="color" name='foreground' id='fg-color' required />
         </div>
-        <br>
+      
         <form action="" method='get' class='form-input'>
           <div class='form-input'>
             <label for="background">Background: </label>
             <input type="color" name='background' id='bg-color' required />
           </div>
-          <br>
+          
           <button onclick='calcRatio()'>Check</button>
-            <br> <br>
+            
       </form>
+    </div>
     </section>
     </main>
     <footer id='footer'>
