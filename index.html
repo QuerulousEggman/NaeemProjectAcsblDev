@@ -8,100 +8,101 @@
   </head>
   <body>
     <div class='content'>
-    <div id='container' class='page_container'></div>
-    <header>
-      <div id='header' class='region_container page_header'>
-        <div class='region_inner'>
-          
-      <ul class='hidden-navigation'>
-        <li>
-          <a href="#main" class='sr-only'>Skip to main content</a>
-        </li>
-        <li>
-          <a href="#footer" class='sr-only'>Skip to footer content</a>
-        </li>
-      </ul>
-      <div class='logo'>
-        <a href="#index.html" aria-label='Home page' class='active'>
-          <div aria-hidden='true' class='brandmark'>
-            <img src="A11y logo1.png" alt>
+      <div id='container' class='page_container'></div>
+      <header>
+        <div id='header' class='region_container page_header'>
+          <div class='region_inner'>
+            <ul class='hidden-navigation'>
+              <li>
+                <a href="#main" class='sr-only'>Skip to main content</a>
+              </li>
+              <li>
+                <a href="#footer" class='sr-only'>Skip to footer content</a>
+              </li>
+            </ul>
+            <div class='logo'>
+              <a href="#index.html" aria-label='Home page' class='active'>
+                <div aria-hidden='true' class='brandmark'>
+                  <img src="A11y_logo1.png" alt>
+                </div>
+              </a>
+            </div>
+            <nav class='main-navigation' aria-label='Website navigation'>
+              <ul class='navigation'>
+                <li>
+                  <a class='active' href="#home">Home</a>
+                </li>
+                <li>
+                  <a href="#links">Links</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact us</a>
+                </li>
+                <li>
+                  <a href="#tools">Tools</a>
+                </li>
+                <li class='right'>
+                  <a href="#index.html">Login</a>
+                </li>
+                <li class='right'>
+                  <a href="#index.html">Register</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-        </a>
-      </div>
-      
-      <nav class='main-navigation' aria-label='Website navigation'>
-        <ul class='navigation'>
-          <li>
-            <a class='active' href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#links">Links</a>
-          </li>
-          <li>
-            <a href="#contact">Contact us</a>
-          </li>
-          <li>
-            <a href="#tools">Tools</a>
-          </li>
-          <li class='right'>
-            <a href="#index.html">Login</a>
-          </li>
-          <li class='right'>
-            <a href="#index.html">Register</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main id='main'>
-      <h1>Colour Contrast</h1>
-      <div class='flex-container'>
-        <div>
-      <section class='wiisi'>
-      <h2>Why is it so important?</h2>
-      <p>When designing a website accessible <strong>colour contrast</strong> is often given a back seat to incorporate designs which appear more appealing.</p>
-      <p>So why should we worry about colour contrast if it would mean compromising aesthetics?</p>
-      <p>For a start, having appropriately contrasting colour combinations on your site means including people with <strong>colour vision deficiency</strong>.</p>
-      <p>Also, people with moderately low vision can have difficulty telling certain colours apart so the right level of contrast will help.</p>
-      </section>
         </div>
-        <div>
-     <p class='p-wcag'>To this end WCAG have set out guidelines that outline the right level of contrast to be used.</p>
-        </div>
-        <div>
-     <section class='ccs'>
-      <h3>WCAG Colour Contrast Standards</h3>
-      <p class='p-wcag'>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
-      <ul class='wcag'>
-        <li><b>4.5:1</b> for normal text</li>
-        <li><b>3:1</b> for <span class='largetext'>large text</span></li>
-        <li><b>3:1</b> for graphics and user interface components</li>
-      </ul>
-      </section>
-        </div>
-      <div>
-      <section class='ccchecker' aria-label='checker'>
-      <h2>Do you meet the criteria?</h2>
-      <p>Use the colour picker tools below to select the colour for both foreground and background, then select the 'Check' button to see if it meets WCAG standards!</p>
-      <form action="" method='get' class='form-input'>
-        <div class='form-input'>
-          <label for="foreground">Foreground: </label>
-          <input type="color" name='foreground' id='fg-color' required />
-        </div>
-      
-        <form action="" method='get' class='form-input'>
-          <div class='form-input'>
-            <label for="background">Background: </label>
-            <input type="color" name='background' id='bg-color' required />
+      </header>
+      <main id='main'>
+        <h1>Colour Contrast</h1>
+        <div class='flex-container'>
+          <div class='row'>
+            <div class='column'>
+              <section class='wiisi'>
+                <h2>Why is it so important?</h2>
+                <p>When designing a website accessible <strong>colour contrast</strong> is often given a back seat to incorporate designs which appear more appealing.</p>
+                <p>So why should we worry about colour contrast if it would mean compromising aesthetics?</p>
+                <p>For a start, having appropriately contrasting colour combinations on your site means including people with <strong>colour vision deficiency</strong>.</p>
+                <p>Also, people with moderately low vision can have difficulty telling certain colours apart so the right level of contrast will help.</p>
+              </section>
+            </div>
+            <div class='column'>
+              <p class='p-wcag'>To this end WCAG have set out guidelines that outline the right level of contrast to be used.</p>
+            </div>
+            <div class='column'>
+              <section class='ccs'>
+                <h3>WCAG Colour Contrast Standards</h3>
+                <p class='p-wcag'>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
+                <ul class='wcag'>
+                  <li><strong>4.5:1</strong> for normal text</li>
+                  <li><strong>3:1</strong> for <span class='largetext'>large text</span></li>
+                  <li><strong>3:1</strong> for graphics and user interface components</li>
+                </ul>
+              </section>
+            </div>
+            <div class='column'>
+              <section class='ccchecker' aria-label='checker'>
+                <h2>Do you meet the criteria?</h2>
+                <p>Use the colour picker tools below to select the colour for both foreground and background, then select the 'Check' button to see if it meets WCAG standards!</p>
+                <form action="https://webaim.org/resources/contrastchecker/" method='get' class='form-input'>
+                  <div class='form-input'>
+                    <label for="fg-color">Foreground: </label>
+                    <input type="color" name='foreground' id='fg-color' aria-label='foreground' autocomplete='off'>
+                  </div>
+                </form>
+                <form action="https://webaim.org/resources/contrastchecker/" method='get' class='form-input'>
+                  <div class='form-input'>
+                    <label for="bg-color">Background: </label>
+                    <input type="color" name='background' id='bg-color' aria-label='background' autocomplete='off'>
+                  </div>
+                </form>
+                <button onclick='calcRatio()'>Check</button>
+              </section>
+            </div>
           </div>
-          
-          <button onclick='calcRatio()'>Check</button>
-            
-      </form>
-    </div>
-    </section>
-    </main>
-    <footer id='footer'>
-      <ul class='footer-navigation'>
+        </div>
+      </main>
+      <footer id='footer'>
+        <ul class='footer-navigation'>
           <li>
             <a href="sitemap.html">Site Map</a>
           </li>
@@ -118,8 +119,8 @@
             <a href="contact.html">Contact Us</a>
           </li>
         </ul>
-    </footer>
-  </div>
+      </footer>
+    </div>
     <script src='script.js' defer></script>
   </body>
 </html>
