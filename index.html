@@ -54,50 +54,58 @@
       </header>
       <main id='main'>
         <h1>Colour Contrast</h1>
-        <div class='flex-container'>
-          <div class='row'>
-            <div class='column'>
-              <section class='wiisi'>
-                <h2>Why is it so important?</h2>
-                <p>When designing a website accessible <strong>colour contrast</strong> is often given a back seat to incorporate designs which appear more appealing.</p>
-                <p>So why should we worry about colour contrast if it would mean compromising aesthetics?</p>
-                <p>For a start, having appropriately contrasting colour combinations on your site means including people with <strong>colour vision deficiency</strong>.</p>
-                <p>Also, people with moderately low vision can have difficulty telling certain colours apart so the right level of contrast will help.</p>
-              </section>
-            </div>
-            <div class='column'>
-              <p class='p-wcag'>To this end WCAG have set out guidelines that outline the right level of contrast to be used.</p>
-            </div>
-            <div class='column'>
-              <section class='ccs'>
-                <h3>WCAG Colour Contrast Standards</h3>
-                <p class='p-wcag'>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
-                <ul class='wcag'>
-                  <li><strong>4.5:1</strong> for normal text</li>
-                  <li><strong>3:1</strong> for <span class='largetext'>large text</span></li>
-                  <li><strong>3:1</strong> for graphics and user interface components</li>
-                </ul>
-              </section>
-            </div>
-            <div class='column'>
-              <section class='ccchecker' aria-label='checker'>
-                <h2>Do you meet the criteria?</h2>
-                <p>Use the colour picker tools below to select the colour for both foreground and background, then select the 'Check' button to see if it meets WCAG standards!</p>
-                <form action="https://webaim.org/resources/contrastchecker/" method='get' class='form-input'>
-                  <div class='form-input'>
-                    <label for="fg-color">Foreground: </label>
-                    <input type="color" name='foreground' id='fg-color' aria-label='foreground' autocomplete='off'>
-                  </div>
-                </form>
-                <form action="https://webaim.org/resources/contrastchecker/" method='get' class='form-input'>
-                  <div class='form-input'>
-                    <label for="bg-color">Background: </label>
-                    <input type="color" name='background' id='bg-color' aria-label='background' autocomplete='off'>
-                  </div>
-                </form>
-                <button onclick='calcRatio()'>Check</button>
-              </section>
-            </div>
+        <div class='row'>
+          <div class='full_row'>
+            <section class='wiisi'>
+              <h2>Why is it so important?</h2>
+              <p>When designing a website accessible <strong>colour contrast</strong> is often given a back seat to incorporate designs which appear more appealing.</p>                <p>So why should we worry about colour contrast if it would mean compromising aesthetics?</p>
+              <p>For a start, having appropriately contrasting colour combinations on your site means including people with <strong>colour vision deficiency</strong>.</p>
+              <p>Also, people with moderately low vision can have difficulty telling certain colours apart so the right level of contrast will help.</p>
+            </section>
+          </div>
+          <div class='column'>
+            <section class='ccs'>
+              <h3>WCAG Colour Contrast Standards</h3>
+              <p class='p-wcag'>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
+              <ul class='wcag'>
+                <li><strong>4.5:1</strong> for normal text</li>
+                <li><strong>3:1</strong> for <span class='largetext'>large text</span></li>
+                <li><strong>3:1</strong> for graphics and user interface components</li>
+              </ul>
+            </section>
+          </div>
+          <div class='column'>
+            <section class='ccchecker' aria-label='checker'>
+              <h2>Do you meet the criteria?</h2>
+              <p>Use the colour picker tools below to select the colour for both foreground and background, then select the 'Check' button to see if it meets WCAG standards!</p>
+              <form action="https://webaim.org/resources/contrastchecker/" method='get' class='form-input'>
+                <fieldset>
+                  <legend>Foreground</legend>
+                  <label for="fg-picker" class='hidden'>Colour Picker</label>
+                  <input type="color" name='foreground' id='fg-picker' autocomplete='off'>
+                  <label for="fg-hex" class='hidden'>Hex</label>
+                  <input type='text' name= 'foreground' id='fg-hex' maxlength='7' autocomplete='off'>
+                </fieldset>
+              </form>
+              <form action="https://webaim.org/resources/contrastchecker/" method='get' class='form-input'>
+                <fieldset>
+                  <legend>Background</legend>
+                  <label for="bg-picker" class='hidden'>Colour Picker</label>
+                  <input type="color" name='background' id='bg-picker' autocomplete='off'>
+                  <label for="bg-hex" class='hidden'>Hex</label>
+                  <input type='text' name= 'background' id='bg-hex' maxlength='7' autocomplete='off'>
+                </fieldset>
+              </form>
+              <button onclick='calcRatio()'>Check</button>
+            </section>
+            <section class='faq'>
+              <h2 class='faqH2'>Frequently Asked Questions</h2>
+              <div class='accordion_container'>
+                <button aria-expanded='false' class='accordion_trigger' id='acc_0_btn' aria-controls='acc_0_content' fdprocessedid='qdxe6q'>What are some good colour combinations?</button>
+                <div class='accordion_content' role='region' aria-labelledby='acc_0_btn' id='acc_0_content' aria-hidden='true' style='display: none;'></div>
+                
+              </div>
+            </section>
           </div>
         </div>
       </main>

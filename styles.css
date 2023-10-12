@@ -70,21 +70,13 @@ ul.navigation li.right {float: right;}
   max-width: 100%;
 }
 
-
-
 #bgcolor {
   max-width: 100%;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
   text-align: center;
 }
-
-/* .flex-container {
-  display: flex;
-  height: 200px;
-  justify-content: space-around;
-} */
 
 .row {
   display: flex;
@@ -92,9 +84,15 @@ h1, h2, p {
   padding: 0 4px;
 }
 
+.full_row {
+  width: 100%
+}
+
 .column {
+  display: flex;
   flex: 0%;
-  max-width: 25%;
+  max-width: 50%;
+  min-height: max-content;
   padding: 0 4px;
 }
 
@@ -117,12 +115,48 @@ h1, h2, p {
 }
 
 .ccs {
-  text-align: left;
   background-color: rgb(196, 255, 255);
 }
 
 .largetext {
   font-size: 25px;
+}
+
+.ccchecker {
+  background-color: #fdf697;
+}
+
+legend {
+  font-weight: bold;
+}
+
+#hidden {
+  display: none;
+}
+
+input {
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+button {
+  border-radius: 8px;
+  padding: 5px;
+  width: 100px;
+  transition-duration: 0.3s;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #333;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button:focus {
+  background: yellow;
+  color: blue;
 }
 
 ul.footer-navigation {
@@ -131,6 +165,7 @@ ul.footer-navigation {
   background-color: rgba(110, 209, 135, 0.555);
   padding: 0;
   margin: 0;
+  margin-top: 10px;
 }
 
 ul.footer-navigation li {
