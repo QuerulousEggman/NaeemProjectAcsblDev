@@ -159,6 +159,46 @@ button:focus {
   color: blue;
 }
 
+.accordion_container
+.accordion_trigger {
+  background: #190342;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.active, .accordion_trigger:hover {
+  background-color: #ccc;
+  
+}
+
+.accordion_content {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+p.accordion {
+  text-align: left;
+}
+
+.accordion_trigger:after {
+  content: '\25B6';
+  font-size: 13px;
+  color: #777;
+  float: left;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.accordion_trigger.active:after {
+  content: "\25BC";
+}
+
 ul.footer-navigation {
   list-style-type: none;
   overflow: hidden;

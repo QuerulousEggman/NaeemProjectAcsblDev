@@ -1,5 +1,17 @@
-const calc = document.querySelector(".calcRatio");
+let acc = document.getElementsByClassName("accordion_trigger");
+let i;
 
-function calcRatio() {
-  
+for (i=0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /*Toggle between adding and removing the "active" class, to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    let accordion_content = this.nextElementSibling;
+    if (accordion_content.style.display === "block") {
+      accordion_content.style.display = "none";
+    } else {
+      accordion_content.style.display = "block";
+    }
+  });
 }
