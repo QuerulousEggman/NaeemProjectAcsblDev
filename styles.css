@@ -57,6 +57,11 @@ ul.navigation li a:hover:not(.active) {
   color: black;
 }
 
+ul.navigation li a:focus {
+  background-color: white;
+  color: black;
+}
+
 ul.navigation li a.active {background-color: #83569f;}
 
 ul.navigation li.right {float: right;}
@@ -152,11 +157,38 @@ button:hover {
   background-color: #333;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
 }
 
 button:focus {
-  background: yellow;
-  color: blue;
+  color: yellow;
+  background: blue;
+}
+
+.selectt {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: 0.5s;
+  input[type="radio"]:checked ~ &,
+  input[type="checkbox"]:checked ~ & {
+    opacity: 1;
+    max-height: 100px;
+    overflow: visible;
+    padding: 10px 20px;
+    transform: scale(1);
+  }
+}
+.faq {
+  border: dotted 5px;
+  margin-top: 10px;
+}
+
+.faq_heading {
+  font-size: 24px;
+  text-align: center;
+
 }
 
 .accordion_container
@@ -171,8 +203,12 @@ button:focus {
 }
 
 .active, .accordion_trigger:hover {
-  background-color: #ccc;
+  background-color: #919191;
   
+}
+
+.accordion_trigger:focus {
+  background-color: rgb(0, 38, 255);
 }
 
 .accordion_content {
@@ -186,17 +222,10 @@ p.accordion {
   text-align: left;
 }
 
-.accordion_trigger:after {
-  content: '\25B6';
-  font-size: 13px;
-  color: #777;
-  float: left;
-  margin-left: 5px;
-  margin-right: 10px;
-}
-
-.accordion_trigger.active:after {
-  content: "\25BC";
+.footer-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul.footer-navigation {
@@ -206,9 +235,6 @@ ul.footer-navigation {
   padding: 0;
   margin: 0;
   margin-top: 10px;
-}
-
-ul.footer-navigation li {
   text-align: center;
 }
 
@@ -217,4 +243,20 @@ ul.footer-navigation li a {
   padding: 14px 16px;
   color: black;
   text-decoration: underline;
+  margin-top: 10px;
+  text-align: center;
+}
+
+ul.footer-navigation li a:hover {
+  color: blue;
+}
+
+ul.footer-navigation li a:focus {
+  border: black;
+  color: blue;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-navigation {display: block;}
+  ul.footer-navigation li {float: none;}
 }

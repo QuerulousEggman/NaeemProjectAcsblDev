@@ -30,7 +30,7 @@
             <nav class='main-navigation' aria-label='Website navigation'>
               <ul class='navigation'>
                 <li>
-                  <a class='active' href="#home">Home</a>
+                  <a href="#home">Home</a>
                 </li>
                 <li>
                   <a href="#links">Links</a>
@@ -98,15 +98,77 @@
               </form>
               <button onclick='calcRatio()'>Check</button>
             </section>
+            <div class='column'>
+              <section class='ccdonate' aria-label='donate'>
+                <h2>Show me the money!</h2>
+                <p>Would you like to donate towards a very good cause? Have a few million quid to spare? Then enter your details below to give it to us so we can spend it on our toys.</p>
+                <form action="" method='get' class='form-input'>
+                  <label for="d_amt" class='hidden'>Amount:</label>
+                  <input type="text" name='d_amount' id='d_amt' autocomplete='on'>
+                  <div>
+                  <fieldset>
+                    <legend>How would you like to donate?</legend>
+                    <input type="radio" name='donation_mthd' id='ddebit' value='direct_debit'>
+                    <label for="ddebit">Direct Debit</label>
+                    <input type="radio" name='donation_mthd' id='dcard' value='debit_card'>
+                    <label for="dcard">Debit card</label>
+                    <input type="radio" name='donation_mthd' id='ccard' value='credit_card'>
+                    <label for="ccard">Credit card</label>
+                  </fieldset>
+                  </div>
+                  <div class='bdet selectt'>
+                  <fieldset>
+                    <legend>Bank details</legend>
+                    <label for="acc_name" class='hidden'>Name on account:</label>
+                    <input type="text" name='account_name' id='acc_name' data-require-pair='#ddebit' autocomplete='on'>
+                    <label for="s_code" class='hidden'>Sort code:</label>
+                    <input type='number' name= 'sort_code' id='s_code' maxlength='6' data-require-pair='#ddebit' autocomplete='on'>
+                    <label for="acc_no" class='hidden'>Account number:</label>
+                    <input type='number' name= 'account_no' id='acc_no' maxlength='8' data-require-pair='#ddebit' autocomplete='on'>
+                    <input type="submit" value='Submit'>
+                    <input type="reset" value='Reset'>
+                  </fieldset>
+                  </div>
+                  <div class='dc selectt'>
+                  <fieldset>
+                    <legend>Debit card details</legend>
+                    <label for="dcard_name" class='hidden'>Cardholder name:</label>
+                    <input type="text" name='debit_card_name' id='dcard_name' autocomplete='on'>
+                    <label for="dcard_no" class='hidden'>Debit card number:</label>
+                    <input type="text" name='debit_card_number' id='dcard_no' maxlength='16' autocomplete='on'>
+                    <label for="dexp_date" class='hidden'>Debit card expiry date:</label>
+                    <input type='text' name= 'dexpiry_date' id='dexp_date' maxlength='4' autocomplete='on'>
+                    <label for="d_cvu" class='hidden'>CVU:</label>
+                    <input type='number' name= 'dcard_cvu' id='d_cvu' maxlength='3' autocomplete='on'>
+                    <input type="submit" value='Submit'>
+                    <input type="reset" value='Reset'>
+                  </fieldset>
+                  </div>
+                  <div class='cc selectt'>
+                  <fieldset>
+                    <legend>Credit card details</legend>
+                    <label for="ccard_name" class='hidden'>Cardholder name:</label>
+                    <input type="text" name='credit_card_name' id='ccard_name' autocomplete='on'>
+                    <label for="ccard_no" class='hidden'>Credit card number:</label>
+                    <input type="text" name='credit_card_number' id='ccard_no' maxlength='16' autocomplete='on'>
+                    <label for="cexp_date" class='hidden'>Credit card expiry date:</label>
+                    <input type='text' name= 'cexpiry_date' id='cexp_date' maxlength='4' autocomplete='on'>
+                    <label for="c_cvu" class='hidden'>CVU:</label>
+                    <input type='number' name= 'ccard_cvu' id='c_cvu' maxlength='3' autocomplete='on'>
+                    <input type="submit" value='Submit'>
+                    <input type="reset" value='Reset'>
+                  </fieldset>
+                  </div>
+                </form>
+              </section>
+            </div>
           </div>
           <div class='full_row'>
             <section class='faq'>
-              <h2 class='faqH2'>Frequently Asked Questions</h2>
+              <div role='heading' aria-level='1' class='faq_heading'>Frequently Asked Questions</div>
               <div class='accordion_container'>
-                <!-- <button aria-expanded='false' class='accordion_trigger' id='acc_0_btn' aria-controls='acc_0_content' fdprocessedid='qdxe6q'>What are some good colour combinations?</button> -->
-                <!-- <div class='accordion_content' role='region' aria-labelledby='acc_0_btn' id='acc_0_content' aria-hidden='true' style='display: none;'></div> -->
-                <button class='accordion_trigger'>What are some good colour combinations?</button>
-                <div class='accordion_content'>
+                <button class='accordion_trigger' aria-expanded='false' aria-controls='faq1'>What are some good colour combinations?</button>
+                <div id="faq1" class='accordion_content'>
                   <p class='accordion'>Black and white: You won’t find a more accessible color combination than this one. And, while you may think it is bland, there are many leading websites that heavily rely on a black and white combination, including Squarespace -  an authority on web design</p>
                   <p class='accordion'>Green and white: A solid color combination from both an accessibility and design perspective, the green and white combination is used to great effect on Starbucks' website. It’s important to note that there are shades of green that do not sufficiently contrast with a white background</p>
                   <p class='accordion'>Blue and yellow: Both far enough away on the color spectrum to allow for sufficient contrast, yellow and blue is a solid, accessible color combination. It’s important to note that there are shades of yellow and blue that do not sufficiently contrast with each other</p>
@@ -114,10 +176,8 @@
                 </div>
               </div>
               <div class='accordion_container'>
-                <!-- <button aria-expanded='false' class='accordion_trigger' id='acc_0_btn' aria-controls='acc_0_content' fdprocessedid='qdxe6q'>And which ones should I avoid?</button> -->
-                <!-- <div class='accordion_content' role='region' aria-labelledby='acc_0_btn' id='acc_0_content' aria-hidden='true' style='display: none;'></div> -->
-                <button class='accordion_trigger'>And which ones should I avoid?</button>
-                <div class='accordion_content'>
+                <button class='accordion_trigger' aria-expanded='false' aria-controls='faq2'>And which ones should I avoid?</button>
+                <div id="faq2" class='accordion_content'>
                   <p class='accordion'>There are certain color combinations that tend to be problematic, as they often do not contrast sufficiently. If you are interested in using them, you will need to examine specific shades to see if they properly contrast. These include, but are not limited to:</p>
                   <ul>
                     <li>Green and red</li>
@@ -133,10 +193,8 @@
                 </div>
               </div>
               <div class='accordion_container'>
-                <!-- <button aria-expanded='false' class='accordion_trigger' id='acc_0_btn' aria-controls='acc_0_content' fdprocessedid='qdxe6q'>What are some examples of web pages that meet the required contrast ratios?</button> -->
-                <!-- <div class='accordion_content' role='region' aria-labelledby='acc_0_btn' id='acc_0_content' aria-hidden='true' style='display: none;'></div> -->
-                <button class='accordion_trigger'>What are some examples of web pages that meet the required contrast ratios?</button>
-                <div class='accordion_content'>
+                <button class='accordion_trigger' aria-expanded='false' aria-controls='faq3'>What are some examples of web pages that meet the required contrast ratios?</button>
+                <div id="faq3" class='accordion_content'>
                   <ol>
                     <li>accessiBe - The contrast between text and background is as high as 15.52:1 on accessiBe’s homepage.</li>
                     <li>Beladora - On this web page, the contrast between text and background is as low as 13.24:1 and as high as 21.11:1.</li>

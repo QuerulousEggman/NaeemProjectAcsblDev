@@ -1,0 +1,6 @@
+fix arc errors
+put in aria role (search aria roles -> aria heading role)
+add in the aria-expanded code to 2nd and 3rd faq code
+change colors to lighter shade
+
+if time - search input type=color on mdn webdocs site
