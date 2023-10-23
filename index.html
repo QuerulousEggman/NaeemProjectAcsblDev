@@ -23,7 +23,7 @@
             <div class='logo'>
               <a href="#index.html" aria-label='Home page' class='active'>
                 <div aria-hidden='true' class='brandmark'>
-                  <img src="A11y_logo1.png" alt>
+                  <img src="A11y_logo1.png" alt=''>
                 </div>
               </a>
             </div>
@@ -65,8 +65,8 @@
           </div>
           <div class='column'>
             <section class='ccs'>
-              <h3>WCAG Colour Contrast Standards</h3>
-              <p class='p-wcag'>To meet the WCAG standards the following colour contrast ratios have to be at least:</p>
+              <h2>WCAG Colour Contrast Standards</h2>
+              <p class='p-wcag'>To meet the <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG standards</a> the following colour contrast ratios have to be at least:</p>
               <ul class='wcag'>
                 <li><strong>4.5:1</strong> for normal text</li>
                 <li><strong>3:1</strong> for <span class='largetext'>large text</span></li>
@@ -98,74 +98,82 @@
               </form>
               <button onclick='calcRatio()'>Check</button>
             </section>
-            <div class='column'>
-              <section class='ccdonate' aria-label='donate'>
-                <h2>Show me the money!</h2>
-                <p>Would you like to donate towards a very good cause? Have a few million quid to spare? Then enter your details below to give it to us so we can spend it on our toys.</p>
-                <form action="" method='get' class='form-input'>
-                  <label for="d_amt" class='hidden'>Amount:</label>
-                  <input type="text" name='d_amount' id='d_amt' autocomplete='on'>
-                  <div>
+          </div>
+          <div class='pay_donate'>
+            <div class='ccdonate' role='radiogroup' aria-label='donate'>
+              <h2>Send us your donations!</h2>
+              <p>Would you like to donate towards a very good cause? All donations are distributed to worthwhile causes in the UK.</p>
+              <form action="index.html" method='get' class='form-input'>
+                <label for="d_amt" class='hidden'>Amount:</label>
+                <input type="text" name='d_amount' id='d_amt' autocomplete='on'>
+                <div>
                   <fieldset>
                     <legend>How would you like to donate?</legend>
-                    <input type="radio" name='donation_mthd' id='ddebit' value='direct_debit'>
-                    <label for="ddebit">Direct Debit</label>
-                    <input type="radio" name='donation_mthd' id='dcard' value='debit_card'>
-                    <label for="dcard">Debit card</label>
-                    <input type="radio" name='donation_mthd' id='ccard' value='credit_card'>
-                    <label for="ccard">Credit card</label>
+                    <ul id='radio_accordion'>
+                      <li>
+                        <label for="ddebit">Direct Debit</label>
+                        <input type="radio" name='radio_accordion' id='ddebit' value='direct_debit'>
+                        <div class='radio_content'>
+                          <fieldset>
+                            <legend>Bank details</legend>
+                            <label for="acc_name" class='hidden'>Name on account:</label>
+                            <input type="text" name='account_name' id='acc_name' data-require-pair='#ddebit' autocomplete='on'>
+                            <label for="s_code" class='hidden'>Sort code:</label>
+                            <input type='text' name= 'sort_code' id='s_code' maxlength='6' data-require-pair='#ddebit' autocomplete='on'>
+                            <label for="acc_no" class='hidden'>Account number:</label>
+                            <input type='text' name= 'account_no' id='acc_no' maxlength='8' data-require-pair='#ddebit' autocomplete='on'>
+                            <input type="submit" value='Submit'>
+                            <input type="reset" value='Reset'>
+                          </fieldset>
+                        </div>
+                      </li>
+                      <li>
+                        <label for="dcard">Debit card</label>
+                        <input type="radio" name='radio_accordion' id='dcard' value='debit_card'>
+                        <div class='radio_content'>
+                          <fieldset>
+                            <legend>Debit card details</legend>
+                            <label for="dcard_name" class='hidden'>Cardholder name:</label>
+                            <input type="text" name='debit_card_name' id='dcard_name' autocomplete='on'>
+                            <label for="dcard_no" class='hidden'>Debit card number:</label>
+                            <input type="text" name='debit_card_number' id='dcard_no' maxlength='16' autocomplete='on'>
+                            <label for="dexp_date" class='hidden'>Debit card expiry date:</label>
+                            <input type='text' name= 'dexpiry_date' id='dexp_date' maxlength='4' autocomplete='on'>
+                            <label for="d_cvv" class='hidden'>CVV:</label>
+                            <input type='text' name= 'dcard_cvv' id='d_cvv' maxlength='3' autocomplete='on'>
+                            <input type="submit" value='Submit'>
+                            <input type="reset" value='Reset'>
+                          </fieldset>
+                        </div>
+                      </li>
+                      <li>
+                        <label for="ccard">Credit card</label>
+                        <input type="radio" name='radio_accordion' id='ccard' value='credit_card'>
+                        <div class='radio_content'>
+                          <fieldset>
+                            <legend>Credit card details</legend>
+                            <label for="ccard_name" class='hidden'>Cardholder name:</label>
+                            <input type="text" name='credit_card_name' id='ccard_name' autocomplete='on'>
+                            <label for="ccard_no" class='hidden'>Credit card number:</label>
+                            <input type="text" name='credit_card_number' id='ccard_no' maxlength='16' autocomplete='on'>
+                            <label for="cexp_date" class='hidden'>Credit card expiry date:</label>
+                            <input type='text' name= 'cexpiry_date' id='cexp_date' maxlength='4' autocomplete='on'>
+                            <label for="c_cvv" class='hidden'>CVV:</label>
+                            <input type='text' name= 'ccard_cvv' id='c_cvv' maxlength='3' autocomplete='on'>
+                            <input type="submit" value='Submit'>
+                            <input type="reset" value='Reset'>
+                          </fieldset>
+                        </div>
+                      </li>
+                    </ul>
                   </fieldset>
-                  </div>
-                  <div class='bdet selectt'>
-                  <fieldset>
-                    <legend>Bank details</legend>
-                    <label for="acc_name" class='hidden'>Name on account:</label>
-                    <input type="text" name='account_name' id='acc_name' data-require-pair='#ddebit' autocomplete='on'>
-                    <label for="s_code" class='hidden'>Sort code:</label>
-                    <input type='number' name= 'sort_code' id='s_code' maxlength='6' data-require-pair='#ddebit' autocomplete='on'>
-                    <label for="acc_no" class='hidden'>Account number:</label>
-                    <input type='number' name= 'account_no' id='acc_no' maxlength='8' data-require-pair='#ddebit' autocomplete='on'>
-                    <input type="submit" value='Submit'>
-                    <input type="reset" value='Reset'>
-                  </fieldset>
-                  </div>
-                  <div class='dc selectt'>
-                  <fieldset>
-                    <legend>Debit card details</legend>
-                    <label for="dcard_name" class='hidden'>Cardholder name:</label>
-                    <input type="text" name='debit_card_name' id='dcard_name' autocomplete='on'>
-                    <label for="dcard_no" class='hidden'>Debit card number:</label>
-                    <input type="text" name='debit_card_number' id='dcard_no' maxlength='16' autocomplete='on'>
-                    <label for="dexp_date" class='hidden'>Debit card expiry date:</label>
-                    <input type='text' name= 'dexpiry_date' id='dexp_date' maxlength='4' autocomplete='on'>
-                    <label for="d_cvu" class='hidden'>CVU:</label>
-                    <input type='number' name= 'dcard_cvu' id='d_cvu' maxlength='3' autocomplete='on'>
-                    <input type="submit" value='Submit'>
-                    <input type="reset" value='Reset'>
-                  </fieldset>
-                  </div>
-                  <div class='cc selectt'>
-                  <fieldset>
-                    <legend>Credit card details</legend>
-                    <label for="ccard_name" class='hidden'>Cardholder name:</label>
-                    <input type="text" name='credit_card_name' id='ccard_name' autocomplete='on'>
-                    <label for="ccard_no" class='hidden'>Credit card number:</label>
-                    <input type="text" name='credit_card_number' id='ccard_no' maxlength='16' autocomplete='on'>
-                    <label for="cexp_date" class='hidden'>Credit card expiry date:</label>
-                    <input type='text' name= 'cexpiry_date' id='cexp_date' maxlength='4' autocomplete='on'>
-                    <label for="c_cvu" class='hidden'>CVU:</label>
-                    <input type='number' name= 'ccard_cvu' id='c_cvu' maxlength='3' autocomplete='on'>
-                    <input type="submit" value='Submit'>
-                    <input type="reset" value='Reset'>
-                  </fieldset>
-                  </div>
-                </form>
-              </section>
+                </div>
+              </form>
             </div>
           </div>
           <div class='full_row'>
             <section class='faq'>
-              <div role='heading' aria-level='1' class='faq_heading'>Frequently Asked Questions</div>
+              <h2>Frequently Asked Questions</h2>
               <div class='accordion_container'>
                 <button class='accordion_trigger' aria-expanded='false' aria-controls='faq1'>What are some good colour combinations?</button>
                 <div id="faq1" class='accordion_content'>

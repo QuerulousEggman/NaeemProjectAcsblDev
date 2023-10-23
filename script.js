@@ -1,6 +1,5 @@
 
 
-
 let acc = document.getElementsByClassName("accordion_trigger");
 let i;
 
