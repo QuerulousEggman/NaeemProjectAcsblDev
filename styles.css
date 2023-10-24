@@ -94,7 +94,7 @@ h1, h2, h3, p {
 }
 
 .column {
-  display: flex;
+  display: inline-flex;
   flex: 0%;
   max-width: 50%;
   min-height: max-content;
