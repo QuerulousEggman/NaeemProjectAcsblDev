@@ -21,7 +21,7 @@
               </li>
             </ul>
             <div class='logo'>
-              <a href="#index.html" aria-label='Home page' class='active'>
+              <a href="" aria-label='Accessible Development' class='active'>
                 <div aria-hidden='true' class='brandmark'>
                   <img src="A11y_logo1.png" alt=''>
                 </div>
@@ -30,22 +30,22 @@
             <nav class='main-navigation' aria-label='Website navigation'>
               <ul class='navigation'>
                 <li>
-                  <a href="#home">Home</a>
+                  <a href="">Home</a>
                 </li>
                 <li>
-                  <a href="#links">Links</a>
+                  <a href="">Links</a>
                 </li>
                 <li>
-                  <a href="#contact">Contact us</a>
+                  <a href="">Contact us</a>
                 </li>
                 <li>
-                  <a href="#tools">Tools</a>
+                  <a href="">Tools</a>
                 </li>
                 <li class='right'>
-                  <a href="#index.html">Login</a>
+                  <a href="">Login</a>
                 </li>
                 <li class='right'>
-                  <a href="#index.html">Register</a>
+                  <a href="">Register</a>
                 </li>
               </ul>
             </nav>
@@ -64,7 +64,7 @@
             </section>
           </div>
           <div class='column'>
-            <section class='ccs'>
+            <section class='ccs' aria-label='WCAG standards'>
               <h2>WCAG Colour Contrast Standards</h2>
               <p class='p-wcag'>To meet the <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">WCAG standards</a> the following colour contrast ratios have to be at least:</p>
               <ul class='wcag'>
@@ -82,21 +82,21 @@
                 <fieldset>
                   <legend>Foreground</legend>
                   <label for="fg-picker" class='hidden'>Colour Picker</label>
-                  <input type="color" name='foreground' id='fg-picker' autocomplete='off'>
+                  <input type="color" name='foreground' id='fg-picker' aria-label='foreground colour picker' autocomplete='off'>
                   <label for="fg-hex" class='hidden'>Hex</label>
-                  <input type='text' name= 'foreground' id='fg-hex' maxlength='7' autocomplete='off'>
+                  <input type='text' name= 'foreground' id='fg-hex' maxlength='7' aria-label='foreground hex code' autocomplete='off'>
                 </fieldset>
               </form>
               <form action="https://webaim.org/resources/contrastchecker/" method='get' class='form-input'>
                 <fieldset>
                   <legend>Background</legend>
                   <label for="bg-picker" class='hidden'>Colour Picker</label>
-                  <input type="color" name='background' id='bg-picker' autocomplete='off'>
+                  <input type="color" name='background' id='bg-picker' aria-label='background colour picker' autocomplete='off'>
                   <label for="bg-hex" class='hidden'>Hex</label>
-                  <input type='text' name= 'background' id='bg-hex' maxlength='7' autocomplete='off'>
+                  <input type='text' name= 'background' id='bg-hex' maxlength='7' aria-label='background hex code' autocomplete='off'>
                 </fieldset>
               </form>
-              <button onclick='calcRatio()'>Check</button>
+              <button onclick='calcRatio()' aria-label='check colour contrast'>Check</button>
             </section>
           </div>
           <div class='pay_donate'>
@@ -113,7 +113,7 @@
                       <li>
                         <label for="ddebit">Direct Debit</label>
                         <input type="radio" name='radio_accordion' id='ddebit' value='direct_debit'>
-                        <div class='radio_content'>
+                        <div class='radio_content' role='form' aria-label='bank details'>
                           <fieldset>
                             <legend>Bank details</legend>
                             <label for="acc_name" class='hidden'>Name on account:</label>
@@ -130,7 +130,7 @@
                       <li>
                         <label for="dcard">Debit card</label>
                         <input type="radio" name='radio_accordion' id='dcard' value='debit_card'>
-                        <div class='radio_content'>
+                        <div class='radio_content'  role='form' aria-label='debit card details'>
                           <fieldset>
                             <legend>Debit card details</legend>
                             <label for="dcard_name" class='hidden'>Cardholder name:</label>
@@ -149,7 +149,7 @@
                       <li>
                         <label for="ccard">Credit card</label>
                         <input type="radio" name='radio_accordion' id='ccard' value='credit_card'>
-                        <div class='radio_content'>
+                        <div class='radio_content'  role='form' aria-label='credit card details'>
                           <fieldset>
                             <legend>Credit card details</legend>
                             <label for="ccard_name" class='hidden'>Cardholder name:</label>
